@@ -259,9 +259,9 @@ function getCategory(tags, title) {
 }
 
 /**
- * Génère le HTML d'une page article
+ * Génère le HTML d'une page article avec navigation
  */
-function generateArticleHTML(frontmatter, content, template) {
+function generateArticleHTML(frontmatter, content, template, prevArticle, nextArticle) {
   const { html: bodyHtml, headers } = markdownToHtml(content);
   const toc = generateTOC(headers);
   const tagsHtml = generateTags(frontmatter.tags);
@@ -274,6 +274,15 @@ function generateArticleHTML(frontmatter, content, template) {
   const imageUrl = frontmatter.image?.startsWith('http') 
     ? frontmatter.image 
     : `${CONFIG.siteUrl}${frontmatter.image}`;
+  
+  // Navigation prev/next
+  const prevUrl = prevArticle ? `./${prevArticle.slug}.html` : '#';
+  const prevTitle = prevArticle ? prevArticle.title : 'Premier article';
+  const prevDisabled = prevArticle ? '' : 'disabled';
+  
+  const nextUrl = nextArticle ? `./${nextArticle.slug}.html` : '#';
+  const nextTitle = nextArticle ? nextArticle.title : 'Dernier article';
+  const nextDisabled = nextArticle ? '' : 'disabled';
   
   // Remplacements dans le template
   const replacements = {
@@ -291,7 +300,13 @@ function generateArticleHTML(frontmatter, content, template) {
     '{{TOC}}': toc,
     '{{TAGS_LIST}}': tagsHtml,
     '{{URL_ENCODED}}': encodeURIComponent(`${CONFIG.blogUrl}/${frontmatter.slug}.html`),
-    '{{TITLE_ENCODED}}': encodeURIComponent(frontmatter.title)
+    '{{TITLE_ENCODED}}': encodeURIComponent(frontmatter.title),
+    '{{PREV_ARTICLE_URL}}': prevUrl,
+    '{{PREV_ARTICLE_TITLE}}': prevTitle,
+    '{{PREV_DISABLED}}': prevDisabled,
+    '{{NEXT_ARTICLE_URL}}': nextUrl,
+    '{{NEXT_ARTICLE_TITLE}}': nextTitle,
+    '{{NEXT_DISABLED}}': nextDisabled
   };
   
   let html = template;
@@ -409,18 +424,16 @@ async function build() {
   
   console.log(`📚 ${files.length} fichier(s) Markdown trouvé(s)\n`);
   
-  const articles = [];
+  // Première passe : parser tous les articles
+  const parsedArticles = [];
   const errors = [];
   
   for (const file of files) {
-    console.log(`   📝 ${file}...`);
-    
     try {
       const filePath = path.join(CONFIG.contentDir, file);
       const content = fs.readFileSync(filePath, 'utf-8');
       const { frontmatter, body } = parseFrontmatter(content);
       
-      // Validation
       if (!frontmatter.title) {
         throw new Error('Titre manquant');
       }
@@ -428,38 +441,56 @@ async function build() {
         frontmatter.slug = file.replace('.md', '');
       }
       
-      // Générer le HTML
-      const html = generateArticleHTML(frontmatter, body, template);
-      
-      // Sauvegarder
-      const outputPath = path.join(CONFIG.outputDir, `${frontmatter.slug}.html`);
-      fs.writeFileSync(outputPath, html, 'utf-8');
-      
-      articles.push({
+      parsedArticles.push({
         ...frontmatter,
-        file
+        file,
+        body
       });
-      
-      console.log(`      ✅ ${frontmatter.slug}.html`);
-      
     } catch (err) {
-      console.error(`      ❌ Erreur: ${err.message}`);
+      console.error(`   ❌ Erreur parsing ${file}: ${err.message}`);
       errors.push({ file, error: err.message });
     }
   }
   
+  // Trier par date (du plus récent au plus ancien)
+  parsedArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
+  
+  // Deuxième passe : générer les HTML avec navigation
+  for (let i = 0; i < parsedArticles.length; i++) {
+    const article = parsedArticles[i];
+    console.log(`   📝 ${article.file}...`);
+    
+    try {
+      // Déterminer prev/next
+      const prevArticle = i < parsedArticles.length - 1 ? parsedArticles[i + 1] : null;
+      const nextArticle = i > 0 ? parsedArticles[i - 1] : null;
+      
+      // Générer le HTML avec navigation
+      const html = generateArticleHTML(article, article.body, template, prevArticle, nextArticle);
+      
+      // Sauvegarder
+      const outputPath = path.join(CONFIG.outputDir, `${article.slug}.html`);
+      fs.writeFileSync(outputPath, html, 'utf-8');
+      
+      console.log(`      ✅ ${article.slug}.html`);
+    } catch (err) {
+      console.error(`      ❌ Erreur: ${err.message}`);
+      errors.push({ file: article.file, error: err.message });
+    }
+  }
+  
   console.log('\n📊 Résumé :');
-  console.log(`   ${articles.length} article(s) généré(s)`);
+  console.log(`   ${parsedArticles.length} article(s) généré(s)`);
   if (errors.length > 0) {
     console.log(`   ${errors.length} erreur(s)`);
   }
   
   // Mettre à jour le sitemap
   console.log('');
-  updateSitemap(articles);
+  updateSitemap(parsedArticles);
   
   // Générer articles.json
-  generateArticlesJSON(articles);
+  generateArticlesJSON(parsedArticles);
   
   console.log('\n✅ Build terminé !');
   console.log(`   📁 Articles générés dans : ${CONFIG.outputDir}`);

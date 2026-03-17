@@ -308,9 +308,13 @@
   color: var(--color-text);
 }
 
-.article-content ul,
+.article-content ul {
+  list-style: disc;
+  padding-left: var(--space-xl);
+}
+
 .article-content ol {
-  margin-bottom: var(--space-lg);
+  list-style: decimal;
   padding-left: var(--space-xl);
 }
 
@@ -477,26 +481,27 @@
   transition: all 0.2s ease;
   border: none;
   cursor: pointer;
+  background: var(--brand-accent);
 }
 
 .share-btn.facebook {
-  background: #1877F2;
+  background: var(--brand-accent);
 }
 
 .share-btn.twitter {
-  background: #000000;
+  background: var(--brand-accent);
 }
 
 .share-btn.linkedin {
-  background: #0A66C2;
+  background: var(--brand-accent);
 }
 
 .share-btn.email {
-  background: var(--color-text-light);
+  background: var(--brand-accent);
 }
 
 .share-btn.copy {
-  background: var(--brand-accent);
+  background: var(--color-text-light);
 }
 
 .share-btn:hover {
