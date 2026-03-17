@@ -17,16 +17,6 @@ locale: "fr"
 media_folder: "assets/img/blog"
 public_folder: "/assets/img/blog"
 
-# Éditeur visuel
-editor:
-  preview: true
-
-# Mode de publication (simple = direct)
-publish_mode: simple
-
-# Logo personnalisé
-custom_logo_url: /media/VPRR-LOGO.svg
-custom_footer_text: "VPRR - Villéger Peinture Raval Rénovation"
 Collections:
   - name: "blog"
     label: "Articles Blog"
@@ -35,8 +25,6 @@ Collections:
     create: true
     slug: "{{slug}}"
     preview_path: "blog/{{slug}}.html"
-    editor:
-      preview: true
     sortable_fields: ['date', 'title']
     view_filters:
       - label: Brouillons
@@ -148,15 +136,13 @@ Collections:
             required: false
             hint: "Description affichée sous la vidéo"
 
-# Configuration de l'éditeur
+# Éditeur visuel
 editor:
   preview: true
 
-# Publier sans review (accès direct pour le client)
+# Mode de publication (simple = direct)
 publish_mode: simple
 
-# Logo personnalisé dans l'interface
+# Logo personnalisé
 custom_logo_url: /media/VPRR-LOGO.svg
-
-# Footer personnalisé
 custom_footer_text: "VPRR - Villéger Peinture Raval Rénovation"
