@@ -48,7 +48,7 @@ Collections:
     view_groups:
       - label: Année
         field: date
-        pattern: "\d{4}"
+        pattern: '^\d{4}'
     
     fields:
       - label: "Titre"
