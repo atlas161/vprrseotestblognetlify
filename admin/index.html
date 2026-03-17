@@ -18,7 +18,6 @@
       min-height: 100vh;
     }
     
-    /* Écran de chargement */
     #loading-screen {
       position: fixed;
       inset: 0;
@@ -28,18 +27,10 @@
       justify-content: center;
       background: #F9F7F5;
       z-index: 9999;
-      transition: opacity 0.3s ease;
     }
     
     #loading-screen.hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
-    
-    .loading-logo {
-      width: 120px;
-      height: 40px;
-      margin-bottom: 24px;
+      display: none;
     }
     
     .loading-spinner {
@@ -51,17 +42,16 @@
       animation: spin 1s linear infinite;
     }
     
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
     .loading-text {
       margin-top: 16px;
       font-size: 14px;
       color: #6B5D52;
     }
     
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-    
-    /* Écran de connexion personnalisé */
     #login-screen {
       position: fixed;
       inset: 0;
@@ -105,7 +95,6 @@
       font-weight: 600;
       color: #2D241E;
       margin-bottom: 12px;
-      letter-spacing: -0.02em;
     }
     
     .login-subtitle {
@@ -135,37 +124,27 @@
     
     .login-btn:hover {
       background: #522e0e;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 16px rgba(103, 58, 18, 0.3);
     }
     
-    .login-btn i {
-      font-size: 18px;
+    .login-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
     }
     
-    .login-help {
-      margin-top: 24px;
-      padding-top: 24px;
-      border-top: 1px solid #E8E4DE;
+    .debug-info {
+      margin-top: 16px;
+      padding: 12px;
+      background: #FEF3C7;
+      border-radius: 8px;
+      font-size: 11px;
+      color: #92400E;
+      text-align: left;
+      font-family: monospace;
+      white-space: pre-wrap;
+      max-height: 200px;
+      overflow-y: auto;
     }
     
-    .login-help p {
-      font-size: 13px;
-      color: #8B7D72;
-      margin-bottom: 8px;
-    }
-    
-    .login-help a {
-      color: #673A12;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    
-    .login-help a:hover {
-      text-decoration: underline;
-    }
-    
-    /* Container CMS */
     #cms-root {
       min-height: 100vh;
       display: none;
@@ -175,7 +154,6 @@
       display: block;
     }
     
-    /* Message d'erreur */
     .error-message {
       display: none;
       margin-top: 16px;
@@ -193,155 +171,110 @@
   </style>
 </head>
 <body>
-  <!-- Écran de chargement -->
   <div id="loading-screen">
-    <div class="loading-logo">
-      <svg viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <text x="0" y="28" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#673A12">VPRR</text>
-        <text x="55" y="28" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#6B5D52">Admin</text>
-      </svg>
-    </div>
     <div class="loading-spinner"></div>
-    <p class="loading-text">Chargement de l'interface...</p>
+    <p class="loading-text">Chargement...</p>
   </div>
 
-  <!-- Écran de connexion personnalisé -->
   <div id="login-screen">
     <div class="login-card">
       <div class="login-logo">
         <img src="../media/VPRR-LOGO.svg" alt="VPRR">
       </div>
       <h1 class="login-title">Administration Blog</h1>
-      <p class="login-subtitle">
-        Gérez vos articles, créez du contenu et administrez votre blog de guides et conseils.
-      </p>
-      <button class="login-btn" id="login-btn" onclick="openLoginModal()">
-        <i class="fa-solid fa-lock" aria-hidden="true"></i>
-        Se connecter
-      </button>
-      <div class="error-message" id="error-message">
-        Une erreur est survenue. Veuillez réessayer.
-      </div>
-      <div class="login-help">
-        <p>Vous n'avez pas encore de compte ?</p>
-        <a href="mailto:villergerstephane204@gmail.com?subject=Demande%20accès%20admin%20blog">Demander un accès</a>
-      </div>
+      <p class="login-subtitle">Connectez-vous pour gérer vos articles</p>
+      <button class="login-btn" id="login-btn">Se connecter</button>
+      <div class="error-message" id="error-message"></div>
+      <div class="debug-info" id="debug-info">Debug info...</div>
     </div>
   </div>
 
-  <!-- Container Decap CMS -->
   <div id="cms-root"></div>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  
-  <!-- Netlify Identity Widget (CRITIQUE pour l'authentification) -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  
-  <!-- Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   
   <script>
-    // Configuration pour l'URL de test
-    netlifyIdentity.setLocale('fr');
-    
-    // URL de test actuelle
-    const SITE_URL = 'https://vprrtestblog.netlify.app';
-    const loadingScreen = document.getElementById('loading-screen');
-    const loginScreen = document.getElementById('login-screen');
-    const cmsRoot = document.getElementById('cms-root');
-    const errorMessage = document.getElementById('error-message');
-    
-    // Fonction pour ouvrir la modal de connexion
-    function openLoginModal() {
-      errorMessage.classList.remove('active');
-      netlifyIdentity.open('login');
+    const debugEl = document.getElementById('debug-info');
+    function log(msg) {
+      console.log('[Admin]', msg);
+      debugEl.textContent += '\n' + msg;
     }
-    
-    // Fonction pour initialiser le CMS
-    function initCMS() {
-      loadingScreen.classList.add('hidden');
-      loginScreen.classList.remove('active');
-      cmsRoot.classList.add('active');
-      
-      // Initialiser Decap CMS
-      if (window.CMS) {
-        CMS.init();
-      }
+
+    const loading = document.getElementById('loading-screen');
+    const login = document.getElementById('login-screen');
+    const cms = document.getElementById('cms-root');
+    const error = document.getElementById('error-message');
+    const btn = document.getElementById('login-btn');
+
+    function showError(msg) {
+      error.textContent = msg;
+      error.classList.add('active');
+      log('ERREUR: ' + msg);
     }
-    
-    // Fonction pour afficher l'écran de connexion
+
     function showLogin() {
-      loadingScreen.classList.add('hidden');
-      loginScreen.classList.add('active');
+      loading.classList.add('hidden');
+      login.classList.add('active');
     }
-    
-    // Gestionnaire d'événements Netlify Identity
-    netlifyIdentity.on('init', user => {
-      if (user) {
-        // Utilisateur déjà connecté
-        initCMS();
-      } else {
-        // Pas d'utilisateur, afficher login
-        showLogin();
+
+    function initCMS() {
+      loading.classList.add('hidden');
+      login.classList.remove('active');
+      cms.classList.add('active');
+      if (window.CMS) CMS.init();
+    }
+
+    btn.addEventListener('click', () => {
+      error.classList.remove('active');
+      
+      if (typeof netlifyIdentity === 'undefined') {
+        showError('Netlify Identity non chargé. Vérifiez votre connexion internet.');
+        return;
+      }
+
+      log('Ouverture modal login...');
+      try {
+        netlifyIdentity.open('login');
+      } catch (e) {
+        log('Erreur: ' + e.message);
+        // Fallback: redirect to Netlify Identity directly
+        window.location.href = 'https://vprrtestblog.netlify.app/.netlify/identity';
       }
     });
-    
-    netlifyIdentity.on('login', user => {
-      // Connexion réussie
-      initCMS();
-      netlifyIdentity.close();
-    });
-    
-    netlifyIdentity.on('logout', () => {
-      // Déconnexion
-      window.location.reload();
-    });
-    
-    netlifyIdentity.on('error', err => {
-      console.error('Erreur Netlify Identity:', err);
-      errorMessage.textContent = 'Erreur de connexion : ' + (err.message || 'Veuillez réessayer');
-      errorMessage.classList.add('active');
-    });
-    
-    // Gestion de l'invitation par email
-    netlifyIdentity.on('invite', () => {
-      // Quand l'utilisateur clique sur le lien d'invitation
-      netlifyIdentity.open('signup');
-    });
-    
-    // Vérifier l'état après chargement
+
     window.addEventListener('load', () => {
-      // Laisser le temps à Netlify Identity de s'initialiser
+      log('Page chargée');
+      
       setTimeout(() => {
+        if (typeof netlifyIdentity === 'undefined') {
+          showError('ERREUR CRITIQUE: Netlify Identity n\'est pas chargé.');
+          showLogin();
+          return;
+        }
+
+        log('Netlify Identity OK');
+        netlifyIdentity.setLocale('fr');
+
         const user = netlifyIdentity.currentUser();
-        if (!user && !loginScreen.classList.contains('active')) {
+        if (user) {
+          log('Utilisateur connecté: ' + user.email);
+          initCMS();
+        } else {
+          log('Non connecté');
           showLogin();
         }
-      }, 1000);
+
+        netlifyIdentity.on('login', (user) => {
+          log('Login! ' + user.email);
+          initCMS();
+        });
+
+        netlifyIdentity.on('error', (err) => {
+          showError('Erreur: ' + (err?.message || 'inconnue'));
+        });
+      }, 2000);
     });
-    
-    // Gestion du token dans l'URL (pour les invitations)
-    if (window.location.hash && window.location.hash.includes('invite_token')) {
-      // C'est une invitation, laisser Netlify gérer
-      setTimeout(() => {
-        netlifyIdentity.open('signup');
-      }, 500);
-    }
-    
-    if (window.location.hash && window.location.hash.includes('confirmation_token')) {
-      // Confirmation d'email
-      setTimeout(() => {
-        netlifyIdentity.open('login');
-      }, 500);
-    }
-    
-    if (window.location.hash && window.location.hash.includes('recovery_token')) {
-      // Réinitialisation de mot de passe
-      setTimeout(() => {
-        netlifyIdentity.open('recover');
-      }, 500);
-    }
   </script>
 </body>
 </html>
