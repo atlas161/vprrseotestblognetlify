@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar, html::-webkit-scrollbar, body::-webkit-scrollbar {
+display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar, html, body {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+/* Optional: fine-tune font rendering for that crisp Apple look */
+body {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+/* Leaflet Customization for Dark Theme */
+.leaflet-container {
+background: #111111 !important;
+font-family: 'Inter', sans-serif !important;
+}
+
+/* Darken the tiles to match site background #111111 */
+.leaflet-tile-pane {
+filter: brightness(0.8) contrast(1.2);
+}
+
+.leaflet-control-attribution {
+display: none !important; /* Minimalist look */
+}
+
+/* Hide Leaflet Controls for cleaner look if needed, or style them */
+.leaflet-bar a {
+background-color: #1A1A1A !important;
+color: #D4AF37 !important;
+border-color: #333 !important;
+}
+.leaflet-bar a:hover {
+background-color: #222 !important;
+}
+
+.blog-content {
+  color: #A0A0A0;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.blog-content h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  color: #FFFCF2;
+  font-weight: 800;
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+}
+
+.blog-content h3 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: #FFFCF2;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.blog-content p {
+  margin: 0.85rem 0;
+}
+
+.blog-content a {
+  color: #D4AF37;
+  text-decoration: none;
+}
+
+.blog-content a:hover {
+  text-decoration: underline;
+}
+
+.blog-content strong {
+  color: #FFFCF2;
+  font-weight: 700;
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin: 1rem 0;
+  padding-left: 1.25rem;
+}
+
+.blog-content li {
+  margin: 0.35rem 0;
+}
+
+.blog-content blockquote {
+  margin: 1.25rem 0;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid rgba(212, 175, 55, 0.55);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 0.75rem;
+  color: rgba(255, 252, 242, 0.88);
+}
+
+.blog-content code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95em;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.5rem;
+}
+
+.blog-content pre {
+  margin: 1.2rem 0;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.blog-content pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.blog-content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.2rem 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.blog-content th,
+.blog-content td {
+  padding: 0.75rem 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  vertical-align: top;
+}
+
+.blog-content th:last-child,
+.blog-content td:last-child {
+  border-right: 0;
+}
+
+.blog-content tr:last-child td {
+  border-bottom: 0;
+}
+
+.blog-content th {
+  text-align: left;
+  color: #FFFCF2;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.line-clamp-2,
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  -webkit-line-clamp: 3;
+}

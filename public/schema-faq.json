@@ -1,0 +1,182 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quelle assurance couvre vos opérations drone ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nous disposons d'une assurance responsabilité civile professionnelle spécifique aux opérations aériennes, couvrant les dommages matériels et corporels jusqu'à 1M€. Cette assurance est obligatoire pour les opérations commerciales et inclut la couverture des équipements, la responsabilité du télépilote, et les garanties post-vol."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel type de contrat proposez-vous ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nous établissons des contrats clairs détaillant : périmètre de la mission, livrables attendus, délais, conditions de paiement, droits d'utilisation des contenus, et clauses de confidentialité. Les contrats peuvent être au forfait, à la journée, ou sur devis personnalisé selon la nature et la durée de votre projet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Faut-il des autorisations pour voler en ville ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Selon la zone, une étude est menée et des démarches peuvent être nécessaires. Nous anticipons les délais et validons les contraintes (hauteurs, périmètres, zones sensibles) avant la mission."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle garantie offrez-vous sur vos prestations ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nous garantissons la qualité technique des prises de vue (résolution 4K minimum, stabilité, netteté) et le respect des délais convenus. En cas d'insatisfaction, nous proposons des retouches gratuites ou une nouvelle session dans la limite des conditions météorologiques et réglementaires. Votre satisfaction est notre priorité."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment procédez-vous en cas d'urgence ou d'incident ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nous suivons une procédure d'urgence stricte : atterrissage immédiat en zone sécurisée, évaluation de la situation, notification des autorités si nécessaire, et rapport d'incident complet. Nos pilotes sont formés aux procédures d'urgence et disposent d'équipements de sécurité (gilets, cônes, trousses de premiers secours) pour chaque mission."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment mesurer l'efficacité des contenus vidéo ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nous installons et configurons le suivi des performances avec Google Analytics 4, Search Console, et les outils natives des plateformes. Les KPIs suivis incluent : taux de vue, durée de visionnage, engagement (likes, partages), conversions générées, et impact sur le référencement. Nous fournissons des rapports mensuels avec recommandations d'optimisation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pouvez-vous automatiser la publication de nos contenus ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, nous mettons en place des systèmes d'automatisation via des outils comme Buffer, Hootsuite, ou des solutions personnalisées. Cela permet la programmation des publications, l'optimisation des heures de diffusion selon votre audience, et le reporting automatisé. L'automatisation libère votre temps tout en maintenant une présence régulière."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sur quels réseaux sociaux distribuez-vous les contenus ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nous couvrons l'ensemble des plateformes pertinentes : YouTube, Instagram, Facebook, LinkedIn, TikTok, Twitter/X, Pinterest, et Vimeo. Chaque réseau bénéficie d'une approche spécifique en termes de format, timing, et type de contenu. Nous pouvons également gérer votre blog WordPress et newsletter email."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le drone peut-il aider mon SEO local ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Les visuels drone renforcent l’engagement et la crédibilité sur une page service (images, avant/après, chantier). Couplé à une structure claire (pages piliers, maillage interne, fiche Google Business), cela améliore la performance locale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle stratégie digitale recommandez-vous pour les vidéos drone ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nous conseillons une approche multi-support : YouTube pour le référencement long terme, Instagram Reels/TikTok pour la viralité, LinkedIn pour le B2B, et votre site web comme hub central. Chaque plateforme nécessite un format adapté (vertical pour les réseaux sociaux, horizontal pour YouTube) et une stratégie de publication régulière."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment calculez-vous les tarifs des prestations drone ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les tarifs dépendent de plusieurs facteurs : complexité technique, durée de la mission, zone géographique, traitements post-production requis, et contraintes administratives. Nous proposons des forfaits adaptés (photos, vidéos, inspections) et établissons des devis personnalisés après analyse de vos besoins spécifiques."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quel équipement utilisez-vous pour les prises de vue ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nous utilisons des drones professionnels équipés de caméras 4K/6K, avec gimbal stabilisé 3 axes. Notre flotte inclut des modèles adaptés à chaque situation : drones compacts pour les espaces restreints, modèles hybrides pour les extérieurs, et équipements spécifiques (filtres ND, batteries longue durée) pour garantir une qualité optimale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles sont vos qualifications et certifications ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nos pilotes sont certifiés AESA (Agence de l'Union Européenne pour la Sécurité Aérienne) et possèdent les autorisations requises pour les opérations professionnelles. Nous maintenons nos compétences à jour avec des formations continues en navigation aérienne, gestion des risques, et nouvelles réglementations européennes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles sont les contraintes météo pour un tournage drone ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les vols dépendent du vent, de la pluie et de la visibilité. En cas de météo défavorable, la mission est reportée à une date ultérieure. Un créneau météo et un plan de repli sont prévus pour éviter les déplacements inutiles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle qualité d’images livrez-vous (photo / vidéo) ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Selon la mission, nous livrons des photos haute définition et des vidéos en haute qualité (plans aériens stabilisés). Les médias sont organisés par dates et zones, et un rapport PDF peut être fourni pour les missions chantier ou inspection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vos vols drone respectent-ils la réglementation (DGAC) ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Les opérations sont préparées selon le scénario adapté, avec analyse de zone, périmètres de sécurité, et démarches si nécessaires. L’objectif est de voler en sécurité, avec un cadre clair et des livrables exploitables."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles sont les limitations techniques des drones ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les principales limitations sont : distance maximale 500m (portée visuelle), altitude maximale 120m, résistance au vent jusqu'à 25 km/h, autonomie 25-30 minutes par batterie, et sensibilité aux précipitations. Nous adaptons toujours nos missions à ces contraintes et disposons d'équipements de rechange pour garantir les opérations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de temps prend le montage vidéo après le tournage ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les délais varient selon la complexité : 2-3 jours pour un montage simple (coupe, étalonnage de base), 5-7 jours pour un montage avancé (effets, motion design), et 10-14 jours pour des projets complexes (documentaires, clips musicaux). Nous fournissons toujours une ébauche pour validation avant finalisation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pouvez-vous décliner une vidéo pour les réseaux (9:16, 1:1, 16:9) ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Nous préparons des déclinaisons adaptées (YouTube, Instagram, TikTok, LinkedIn) avec un rythme cohérent et des exports propres. L’objectif est d’avoir un rendu lisible partout, sans refaire tout le montage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment gérez-vous les droits musicaux pour les vidéos ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nous utilisons exclusivement des musiques sous licence royalty-free ou nous vous aidons à acquérir les droits nécessaires. Notre bibliothèque comprend des milliers de titres adaptés à chaque ambiance. Pour des projets spécifiques, nous pouvons également composer des musiques originales ou collaborer avec des compositeurs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puis-je demander des modifications sur le montage ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, chaque forfait inclut 2 tours de révisions gratuits. Les modifications peuvent concerner la structure, le rythme, les couleurs, la musique, et les textes. Au-delà, nous proposons des options de révisions supplémentaires. Nous travaillons toujours avec votre validation à chaque étape clé du projet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pouvez-vous créer plusieurs versions d'une même vidéo ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolument. Nous créons des versions adaptées à chaque plateforme : format 16:9 pour YouTube/TV, 9:16 pour Instagram Reels/TikTok, 1:1 pour Facebook/LinkedIn, et formats carrés pour les bannières web. Chaque version est optimisée en durée et rythme selon les attentes de l'audience cible."
+      }
+    }
+  ]
+}

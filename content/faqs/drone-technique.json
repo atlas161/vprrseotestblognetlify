@@ -1,0 +1,7 @@
+{
+  "published": true,
+  "category": "Drone",
+  "question": "Quelles sont les limitations techniques des drones ?",
+  "slug": "drone-technique",
+  "answer": "<p>Les principales limitations sont : distance maximale 500m (portée visuelle), altitude maximale 120m, résistance au vent jusqu'à 25 km/h, autonomie 25-30 minutes par batterie, et sensibilité aux précipitations. Nous adaptons toujours nos missions à ces contraintes et disposons d'équipements de rechange pour garantir les opérations.</p>"
+}

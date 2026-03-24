@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Page d'accueil - Priorité maximale -->
+  <url>
+    <loc>https://www.eagle-prod.com/</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.eagle-prod.com/Photo_de_paul_bardin.webp</image:loc>
+      <image:title>Paul Bardin - Fondateur Eagle Production</image:title>
+      <image:caption>Télépilote de drone professionnel certifié basé à Angoulême</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.eagle-prod.com/media/logo_beige.png</image:loc>
+      <image:title>Logo Eagle Production</image:title>
+    </image:image>
+  </url>
+
+  <!-- Section Portfolio/Galerie -->
+  <url>
+    <loc>https://www.eagle-prod.com/#gallery</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Section Services/Formules Drone -->
+  <url>
+    <loc>https://www.eagle-prod.com/#services</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Section Suivi de chantier BTP -->
+  <url>
+    <loc>https://www.eagle-prod.com/chantier</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Page À Propos -->
+  <url>
+    <loc>https://www.eagle-prod.com/a-propos</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Section Technologies -->
+  <url>
+    <loc>https://www.eagle-prod.com/#tech</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Section Zone d'intervention -->
+  <url>
+    <loc>https://www.eagle-prod.com/#zone</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Page Zone d'intervention -->
+  <url>
+    <loc>https://www.eagle-prod.com/zone</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Page Inspection de bâtiments par drone -->
+  <url>
+    <loc>https://www.eagle-prod.com/inspection</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Page Blog -->
+  <url>
+    <loc>https://www.eagle-prod.com/blog</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Article de blog: Premiers vols sur chantier: angles, sécurité et livrables -->
+  <url>
+    <loc>https://www.eagle-prod.com/blog/premiers-vols-chantier</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Article de blog: Montage vidéo: rythme, lisibilité et formats réseaux -->
+  <url>
+    <loc>https://www.eagle-prod.com/blog/montage-video-rythme</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Article de blog: Présence digitale: capitaliser sur le Local SEO -->
+  <url>
+    <loc>https://www.eagle-prod.com/blog/presence-digitale-local-seo</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Page FAQ -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- FAQ: Quelle assurance couvre vos opérations drone ?... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/admin-assurance</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Quel type de contrat proposez-vous ?... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/admin-contrats</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Faut-il des autorisations pour voler en ville ?... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/admin-delais</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Quelle garantie offrez-vous sur vos prestations ?... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/admin-garantie</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Comment procédez-vous en cas d'urgence ou d'incide... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/admin-urgence</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Comment mesurer l'efficacité des contenus vidéo ?... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/digital-analytics</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Pouvez-vous automatiser la publication de nos cont... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/digital-automatisation</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Sur quels réseaux sociaux distribuez-vous les cont... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/digital-réseaux</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Le drone peut-il aider mon SEO local ?... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/digital-seo-local</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Quelle stratégie digitale recommandez-vous pour le... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/digital-strategie</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Comment calculez-vous les tarifs des prestations d... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/drone-couts</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Quel équipement utilisez-vous pour les prises de v... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/drone-equipements</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Quelles sont vos qualifications et certifications ... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/drone-formation</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Quelles sont les contraintes météo pour un tournag... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/drone-meteo</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Quelle qualité d’images livrez-vous (photo / vidéo... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/drone-qualite-livrables</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Vos vols drone respectent-ils la réglementation (D... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/drone-reglementation</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Quelles sont les limitations techniques des drones... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/drone-technique</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Combien de temps prend le montage vidéo après le t... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/montage-delais</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Pouvez-vous décliner une vidéo pour les réseaux (9... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/montage-formats</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Comment gérez-vous les droits musicaux pour les vi... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/montage-musique</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Puis-je demander des modifications sur le montage ... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/montage-revisions</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- FAQ: Pouvez-vous créer plusieurs versions d'une même vi... -->
+  <url>
+    <loc>https://www.eagle-prod.com/faq/montage-versions</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <!-- Section Avis & FAQ -->
+  <url>
+    <loc>https://www.eagle-prod.com/#reviews</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Section Contact -->
+  <url>
+    <loc>https://www.eagle-prod.com/contact</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Mentions légales -->
+  <url>
+    <loc>https://www.eagle-prod.com/mentions-legales.html</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

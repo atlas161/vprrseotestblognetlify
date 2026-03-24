@@ -1,0 +1,122 @@
+media:
+  input: public/uploads
+  output: /uploads
+
+content:
+  - name: posts
+    label: Articles
+    type: collection
+    path: content/posts
+    filename: '{year}-{month}-{day}-{fields.slug}.json'
+    view:
+      fields: [coverImage, title, date, category, published]
+      sort: [date, title]
+      order: desc
+    fields:
+      - name: published
+        label: Publié
+        type: boolean
+        default: true
+      - name: date
+        label: Date
+        type: date
+      - name: title
+        label: Titre
+        type: string
+      - name: slug
+        label: Slug
+        type: slug
+        target: title
+      - name: category
+        label: Catégorie
+        type: select
+        options:
+          - Drone
+          - Montage vidéo
+          - Digital
+      - name: tags
+        label: Tags
+        type: list
+        item:
+          type: string
+      - name: coverImage
+        label: Image de couverture
+        type: image
+      - name: excerpt
+        label: Accroche
+        type: text
+      - name: body
+        label: Contenu
+        type: rich-text
+      - name: seoTitle
+        label: SEO Title
+        type: string
+        required: false
+      - name: seoDescription
+        label: SEO Description
+        type: text
+        required: false
+
+  - name: faqs
+    label: FAQ
+    type: collection
+    path: content/faqs
+    filename: '{fields.slug}.json'
+    view:
+      fields: [category, question, published]
+      sort: [category, question]
+      order: asc
+    fields:
+      - name: published
+        label: Publié
+        type: boolean
+        default: true
+      - name: category
+        label: Catégorie
+        type: select
+        options:
+          - Drone
+          - Montage vidéo
+          - Digital
+          - Administratif & sécurité
+      - name: question
+        label: Question
+        type: string
+      - name: slug
+        label: Slug
+        type: slug
+        target: question
+      - name: answer
+        label: Réponse
+        type: rich-text
+
+  - name: reviews
+    label: Avis Google
+    type: collection
+    path: content/reviews
+    filename: '{fields.slug}.json'
+    view:
+      fields: [rating, name, project, published]
+      sort: [rating, name]
+      order: desc
+    fields:
+      - name: published
+        label: Publié
+        type: boolean
+        default: true
+      - name: name
+        label: Nom affiché
+        type: string
+      - name: slug
+        label: Slug
+        type: slug
+        target: name
+      - name: project
+        label: Projet / Catégorie
+        type: string
+      - name: rating
+        label: Note (1–5)
+        type: number
+      - name: content
+        label: Avis
+        type: text
